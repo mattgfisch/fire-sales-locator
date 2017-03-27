@@ -1,6 +1,10 @@
 <h1>Article Town</h1>
 
 <% @articles.each do |article| %>
-  <h4><%= article.title %></h4>
+  <a href= <%= "/articles/#{article.id}" %> >
+    <h4>
+      <%= article.title %>
+  </h4>
+</a>
   <p><%= article.body %></p>
 <% end %>
