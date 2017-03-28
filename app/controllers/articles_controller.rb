@@ -3,6 +3,15 @@ get '/articles' do
   erb :'articles/index'
 end
 
+get '/articles/new' do
+  erb :'articles/new'
+end
+
+post '/articles' do
+  @article = Article.create(params['article'])
+  redirect to '/articles'
+end
+
 get '/articles/:id' do # '/articles/:id'
   @article = Article.find(params[:id])
   erb :'articles/show'
@@ -19,7 +28,4 @@ put '/articles/:id' do
   @article.body = params[:body]
   @article.save
   erb :'articles/show'
-end
-
-post '/articles' do
 end
