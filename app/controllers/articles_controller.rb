@@ -8,6 +8,7 @@ get '/articles/new' do
 end
 
 post '/articles' do
+  p params
   @article = Article.create(params['article'])
   redirect to '/articles'
 end

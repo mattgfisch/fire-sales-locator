@@ -5,11 +5,19 @@ describe 'Articles Controller' do
     before(:each) do
       get '/articles'
     end
+
     it 'sends HTML for the landing page header' do
       expect(last_response.body).to include('<h1>Article Town</h1>')
     end
+
     it 'responds with a status of 200' do
       expect(last_response.status).to eq(200)
+    end
+  end
+
+  describe 'create' do
+    it 'saves an article to the database' do
+      # post ??? pass in params
     end
   end
 end
