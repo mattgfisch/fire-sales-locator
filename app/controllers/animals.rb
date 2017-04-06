@@ -4,8 +4,7 @@ get '/animals' do
 end
 
 get '/animals/new' do
-  # @animal = Animal.new
-  erb :'animals/new'
+  erb :'animals/new', layout: false
 end
 
 get '/animals/:id' do
@@ -15,5 +14,5 @@ end
 
 post '/animals' do
   new_animal = Animal.create(params[:animal])
-  redirect to "/animals/#{new_animal.id}"
+  erb :"animals/_animal", layout: false, locals: {animal: new_animal}
 end

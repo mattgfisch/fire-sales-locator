@@ -1,5 +1,11 @@
 <h1>It's a ZOO out there!</h1>
 
-<% @animals.each do |animal| %>
-  <%= erb :'animals/_animal', locals: {animal: animal} %>
-<% end %>
+<a href='#' id="get-animal-form">Make a new animal. You are playing with forces you cannot comprehend.</a>
+<div id="form-target">
+
+</div>
+<div id='animals'>
+  <% @animals.each do |animal| %>
+    <%= erb :'animals/_animal', locals: {animal: animal} %>
+  <% end %>
+</div>
