@@ -1,0 +1,12 @@
+<h1>It's a ZOO out there!</h1>
+
+<% @animals.each do |animal| %>
+<div>
+  <h4>
+    <%= animal.name %>
+  </h4>
+  <p>
+    <%= animal.species %>
+  </p>
+</div>
+<% end %>
