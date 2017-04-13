@@ -1,13 +1,6 @@
-# Bands Example App
 
-> **Note**: The branch contains an example app built with DBC's Sinatra skeleton. If you're building a new app or challenge, you'll probably want to use the [master](/../../tree/master) branch, which doesn't include any example models, controllers, views or tests.
 
-### Purpose
 
-1. Provides an example implementation of basic CRUD functionality, using the DBC Sinatra skeleton.
-2. Demonstrates that it is not **required** that all models in `app/models` be
-   `ActiveRecord` backed!
-3. Includes a suite of RSpect tests that demonstrate unit, controller and integration testing.
 
 ### Quickstart
 
@@ -25,6 +18,13 @@ To run the entire suite of tests: `rspec`
 
 To run a specific example: `rspec spec/band_spec.rb`
 
+
+As needed, create models & migrations with the `rake` tasks:
+
+```
+rake generate:migration  # Create an empty migration in db/migrate, e.g., rake generate:migration NAME=create_tasks
+rake generate:model      # Create an empty model in app/models, e.g., rake generate:model NAME=User
+```
 
 ### Contributing
 
