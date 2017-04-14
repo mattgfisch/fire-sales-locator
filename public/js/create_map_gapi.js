@@ -6,15 +6,16 @@ function initMap(location, query) {
 
   map = new google.maps.Map(document.getElementById('results_map'), {
     center: center_spot,
-    zoom: 11
+    zoom: 12
   });
 
   infowindow = new google.maps.InfoWindow();
   var service = new google.maps.places.PlacesService(map);
   service.nearbySearch({
     location: center_spot,
-    radius: 8000,
-    keyword: query + " store",
+    radius: 4828.03,
+    keyword: query,
+    type: ['store']
   }, callback);
 }
 
