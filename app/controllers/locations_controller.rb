@@ -1,4 +1,4 @@
 post '/locations' do
-location = params[:search][:location]
+  location = params[:search][:location]
 
 end
