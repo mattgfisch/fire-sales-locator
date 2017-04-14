@@ -1,7 +1,9 @@
+require 'json'
+
 post '/locations' do
   location = params[:search][:location]
+  query = params[:search][:query]
   if request.xhr?
-    location
+    return { location: location, query: query}.to_json
   end
-  nil
 end

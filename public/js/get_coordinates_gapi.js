@@ -1,25 +1,20 @@
 var geocoder;
 
 
-function initialize(){
+function initializeCoord(){
   geocoder = new google.maps.Geocoder();
 }
 
-function codeAddress(givenAddress){
+function codeAddress(givenAddress, result){
   var address = givenAddress;
+  var location;
   geocoder.geocode( { 'address': address}, function(results, status) {
     if (status == 'OK') {
-      var location = results[0].geometry.location;
-      console.log("You are at :" + location);
-      // var marker = new google.maps.Marker({
-      //     map: map,
-      //     position: results[0].geometry.location
-      // });
-      console.log(location);
+      location = results[0].geometry.location;
+      result(location);
     } else {
       alert('Geocode was not successful for the following reason: ' + status);
     };
   });
+  return location;
 };
-
-initialize();
