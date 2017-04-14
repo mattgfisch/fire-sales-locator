@@ -1,0 +1,13 @@
+.container {
+  margin: 0 auto;
+  width: 80%;
+  border-style: solid;
+}
+.page-content{
+  margin: 0 auto;
+  border-style: solid;
+  width: 80%;
+}
+.title {
+  text-align: center;
+}
