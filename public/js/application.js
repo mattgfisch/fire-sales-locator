@@ -17,7 +17,7 @@ $(document).ready(function() {
       var parsed = JSON.parse(response);
 
       codeAddress(parsed.location, function(coordinates){
-        initMap(coordinates, response.query);
+        initMap(coordinates, parsed.query);
       });
 
 
