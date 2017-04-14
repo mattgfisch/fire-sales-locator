@@ -19,9 +19,6 @@ $(document).ready(function() {
       codeAddress(parsed.location, function(coordinates){
         initMap(coordinates, parsed.query);
       });
-
-
-
     });
   })
 });
