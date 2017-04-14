@@ -11,10 +11,10 @@ function initMap(location, query) {
 
   infowindow = new google.maps.InfoWindow();
   var service = new google.maps.places.PlacesService(map);
-  service.textSearch({
+  service.nearbySearch({
     location: center_spot,
     radius: 8000,
-    query: query + " store",
+    keyword: query + " store",
   }, callback);
 }
 
