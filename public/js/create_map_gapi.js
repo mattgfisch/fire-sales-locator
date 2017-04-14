@@ -1,8 +1,8 @@
 var map;
 var infowindow;
 
-function initMap(location, query) {
-  var center_spot = location;
+function initMap(userLocation, userQuery, userRadius) {
+  var center_spot = userLocation;
 
   map = new google.maps.Map(document.getElementById('results_map'), {
     center: center_spot,
@@ -13,8 +13,8 @@ function initMap(location, query) {
   var service = new google.maps.places.PlacesService(map);
   service.nearbySearch({
     location: center_spot,
-    radius: 4828.03,
-    keyword: query,
+    radius: userRadius,
+    keyword: userQuery,
     type: ['store']
   }, callback);
 }
