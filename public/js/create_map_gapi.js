@@ -2,19 +2,19 @@ var map;
 var infowindow;
 
 function initMap(location, query) {
-  var pyrmont = {lat: -33.867, lng: 151.195};
+  var center_spot = location;
 
-  map = new google.maps.Map(document.getElementById('map'), {
-    center: pyrmont,
+  map = new google.maps.Map(document.getElementById('results_map'), {
+    center: center_spot,
     zoom: 15
   });
 
   infowindow = new google.maps.InfoWindow();
   var service = new google.maps.places.PlacesService(map);
   service.nearbySearch({
-    location: pyrmont,
-    radius: 500,
-    type: ['store']
+    location: center_spot,
+    radius: 8000,
+    type: [query]
   }, callback);
 }
 

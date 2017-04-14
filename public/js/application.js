@@ -2,6 +2,7 @@
 
 $(document).ready(function() {
   initializeCoord();
+
   $('#address-container').on('submit', '#address-form', function(e){
     e.preventDefault();
     var formData = $(this).serialize();
@@ -16,9 +17,7 @@ $(document).ready(function() {
       var parsed = JSON.parse(response);
 
       codeAddress(parsed.location, function(coordinates){
-        console.log(coordinates.lat());
-        console.log(coordinates.lng());
-        $('#results_map').html("Latitude: " + coordinates.lat() + " Longitude: " +  coordinates.lng());
+        initMap(coordinates, response.query);
       });
 
 
