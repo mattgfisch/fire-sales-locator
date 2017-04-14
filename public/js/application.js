@@ -15,9 +15,8 @@ $(document).ready(function() {
     });
     locationRequest.done(function(response){
       var parsed = JSON.parse(response);
-      debugger;
       codeAddress(parsed.location, function(coordinates){
-        initMap(coordinates, parsed.query, parsed.radius);
+        initMap(coordinates, parsed.query, parsed.radius, parsed.zoom);
       });
     });
   })

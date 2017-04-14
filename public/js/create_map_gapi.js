@@ -1,12 +1,12 @@
 var map;
 var infowindow;
 
-function initMap(userLocation, userQuery, userRadius) {
+function initMap(userLocation, userQuery, userRadius, userZoom) {
   var center_spot = userLocation;
 
   map = new google.maps.Map(document.getElementById('results_map'), {
     center: center_spot,
-    zoom: 12
+    zoom: userZoom
   });
 
   infowindow = new google.maps.InfoWindow();
