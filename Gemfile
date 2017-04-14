@@ -9,9 +9,11 @@ gem 'sinatra-contrib'
 
 gem 'activesupport', '~>4.2.0'
 gem 'activerecord', '~>4.2.0'
-
+gem 'json'
 gem 'rake'
 
+# gem 'google-api-client', '~> 0.11'
+gem 'dotenv'
 gem 'shotgun', '~>0.9.1'
 
 group :test do

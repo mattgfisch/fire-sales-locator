@@ -1,0 +1,22 @@
+.container {
+  margin: 0 auto;
+  width: 80%;
+}
+.page-content{
+  margin: 0 auto;
+  border-style: solid;
+  width: 80%;
+}
+.title {
+  text-align: center;
+}
+#address-container{
+  padding: 20px;
+  text-align: center;
+}
+
+#results_map{
+  margin-top: 10px;
+  padding: 10px;
+  height: 500px;
+}
