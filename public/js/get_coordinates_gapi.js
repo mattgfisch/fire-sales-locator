@@ -6,9 +6,8 @@ function initializeCoord(){
 }
 
 function codeAddress(givenAddress, result){
-  var address = givenAddress;
   var location;
-  geocoder.geocode( { 'address': address}, function(results, status) {
+  geocoder.geocode( { 'address': givenAddress}, function(results, status) {
     if (status == 'OK') {
       location = results[0].geometry.location;
       result(location);
